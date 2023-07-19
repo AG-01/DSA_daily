@@ -16,7 +16,7 @@ void merge(int arr[], int l, int m, int h) {
     int k = 0;
     int temp[h - l + 1];
     int left = l, right = m + 1;
-    while(left<=m && right<=high)
+    while(left<=m && right<=h)
     {
         if(arr[left]<=arr[right])
         {
@@ -36,7 +36,7 @@ void merge(int arr[], int l, int m, int h) {
         left++;
         k++;
     }
-    while (right <= high) {
+    while (right <= h) {
         temp[k] = arr[right];
         right++;
         k++;
